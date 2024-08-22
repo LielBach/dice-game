@@ -1,6 +1,9 @@
 <script setup>
+import { gameState } from '@/gameState.js'
+
 const startGame = () => {
   console.log('Game started')
+  gameState.resetGame()
 }
 
 const showScores = () => {

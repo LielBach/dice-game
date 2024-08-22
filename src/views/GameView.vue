@@ -15,6 +15,7 @@ import Dices from '@/components/Dices.vue'
         <Button @click="gameState.roll()">Roll Dices</Button>
         <Button @click="gameState.hold()">Hold</Button>
         <Button @click="gameState.resetGame()">Reset</Button>
+        <Button as="router-link" severity="danger" to="/">Main Menu</Button>
       </div>
     </div>
     <div class="score-container">
@@ -25,6 +26,19 @@ import Dices from '@/components/Dices.vue'
 
 <style scoped>
 .score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-panel{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.game-panel {
   display: flex;
   flex-direction: column;
   align-items: center;
