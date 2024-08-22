@@ -6,10 +6,6 @@ const startGame = () => {
   gameState.resetGame()
 }
 
-const showScores = () => {
-  console.log('Scores shown')
-}
-
 </script>
 
 <template>
@@ -17,7 +13,6 @@ const showScores = () => {
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     <h1>Dice Game</h1>
     <Button as="router-link" label="Router" to="/game" @click="startGame">Start Game</Button>
-    <Button as="router-link" label="Router" to="/scores" @click="showScores">Show Scores</Button>
   </div>
 </template>
 
