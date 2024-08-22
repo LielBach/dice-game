@@ -85,7 +85,7 @@ export const gameState = reactive({
   roll() {
     this.dices.roll()
 
-    if (this.dices.dice1 === 6 || this.dices.dice2 === 6) {
+    if (this.dices.dice1 === 6 && this.dices.dice2 === 6) {
       this.players.currentPlayer.lose_score()
     } else {
       this.players.currentPlayer.accumulated_score += this.dices.dice1 + this.dices.dice2

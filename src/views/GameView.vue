@@ -10,6 +10,7 @@ import Dices from '@/components/Dices.vue'
       <PlayerScore :player="gameState.players.player1" />
     </div>
     <div class="game-panel">
+      <h1>{{gameState.players.currentPlayer.name}} turn</h1>
       <Dices />
       <div class="button-panel">
         <Button @click="gameState.roll()">Roll Dices</Button>
