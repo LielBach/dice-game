@@ -7,11 +7,18 @@ import Dices from '@/components/Dices.vue'
 <template>
   <div class="game-view">
     <div class="score-container">
-      <PlayerScore :player="gameState.player1" />
+      <PlayerScore :player="gameState.players.player1" />
     </div>
-    <Dices />
+    <div class="game-panel">
+      <Dices />
+      <div class="button-panel">
+        <Button @click="gameState.roll()">Roll Dices</Button>
+        <Button @click="gameState.hold()">Hold</Button>
+        <Button @click="gameState.resetGame()">Reset</Button>
+      </div>
+    </div>
     <div class="score-container">
-      <PlayerScore :player="gameState.player2" />
+      <PlayerScore :player="gameState.players.player2" />
     </div>
   </div>
 </template>
