@@ -34,11 +34,12 @@ h3 {
 }
 
 .greetings {
+  height: 30vh;
   width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
 
 }
