@@ -93,8 +93,4 @@ export const gameState = reactive({
 
     this.nextRound()
   },
-
-  setScoreToWin(score) {
-    this.scoreToWin = score
-  },
 })

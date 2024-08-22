@@ -12,6 +12,10 @@ import Dices from '@/components/Dices.vue'
     <div class="game-panel">
       <h1>{{gameState.players.currentPlayer.name}} turn</h1>
       <Dices />
+      <div class="score-container">
+        <label>Desired Score</label>
+        <InputText class="score-input-field" type="text" v-model="gameState.scoreToWin"/>
+      </div>
       <div class="button-panel">
         <Button @click="gameState.roll()">Roll Dices</Button>
         <Button @click="gameState.hold()">Hold</Button>
@@ -37,6 +41,11 @@ import Dices from '@/components/Dices.vue'
   flex-direction: row;
   width: 60%;
   justify-content: space-between;
+}
+
+.score-input-field{
+  margin: 0.3rem;
+  text-align: center;
 }
 
 .game-panel {
